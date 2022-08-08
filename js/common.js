@@ -12,8 +12,8 @@ $('.one-time').slick({
     autoplaySpeed: 8000,        // 자동 스크롤 시 다음으로 넘어가는데 걸리는 시간 
     pauseOnHover : true,		// 슬라이드 이동 시 마우스 호버하면 슬라이더 멈추게 설정
 
-    vertical : true,		    // 세로 방향 슬라이드 옵션
-    verticalSwiping: true,      // 세로 방향 스와이프 옵션
+    vertical : false,		    // 세로 방향 슬라이드 옵션
+    verticalSwiping: false,      // 세로 방향 스와이프 옵션
 
     // arrows: false,               // 옆으로 이동하는 화살표 표시 여부
     // prevArrow : "<button type='button' class='slick-prev'>Previous</button>",		    // 이전 화살표 모양 설정

@@ -166,7 +166,7 @@
     content: "";
     display: inline-block;
     vertical-align: middle;
-    background: url(../img_welcome/paging.svg) no-repeat center;
+    background: url(../img/paging.svg) no-repeat center;
     background-size: contain;
     width: 14px;
     height: 14px;
@@ -186,7 +186,7 @@
 #welcome_buisiness .arrows {
     content: "";
     display: block;
-    background: url(../img_welcome/arrow-dn-n.svg) no-repeat center;
+    background: url(../img/arrow-dn-n.svg) no-repeat center;
     background-size: contain;
     width: 26px;
     height: 12px;
@@ -197,7 +197,7 @@
 }
 
 #welcome_buisiness .arrows.move {
-    background: url(../img_welcome/arrow-dn.svg) no-repeat center;
+    background: url(../img/arrow-dn.svg) no-repeat center;
     animation: motion 0.7s linear 0s infinite alternate;
     margin-top: 0;
     width: 48px;
@@ -207,7 +207,7 @@
 #welcome_buisiness .slide2 .arrows {
     width: 48px;
     height: 42px;
-    background: url(../img_welcome/arrow-dn-w.svg) no-repeat center;
+    background: url(../img/arrow-dn-w.svg) no-repeat center;
     margin-top: -7px;
     margin-left: -24px;
 }
@@ -226,7 +226,7 @@
     float: right;
     content: "";
     display: block;
-    background: url(../img_welcome/wv-logo.svg) no-repeat center;
+    background: url(../img/wv-logo.svg) no-repeat center;
     background-size: contain;
     width: 90px;
     height: 20px;
@@ -259,7 +259,7 @@
     content: "";
     display: inline-block;
     margin-left: 5px;
-    background: url(../img_welcome/btn-arrow.svg) no-repeat center;
+    background: url(../img/btn-arrow.svg) no-repeat center;
     background-size: contain;
     width: 16px;
     height: 14px;
@@ -311,7 +311,7 @@
         float: right;
         content: "";
         display: block;
-        background: url(../img_welcome/wv-logo.svg) no-repeat center;
+        background: url(../img/wv-logo.svg) no-repeat center;
         background-size: contain;
         width: 90px;
         height: 20px;
@@ -322,7 +322,7 @@
         content: "";
         display: inline-block;
         vertical-align: middle;
-        background: url(../img_welcome/paging.svg) no-repeat center;
+        background: url(../img/paging.svg) no-repeat center;
         background-size: contain;
         width: 14px;
         height: 14px;
