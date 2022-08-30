@@ -3,49 +3,84 @@
 /* --------------------- Published by 4m Creative --------------------- */
 
 @charset "utf-8";
+/*  
+ * @ RESET CSS
+ * -------------------------------
+ */
 
-#welcome_buisiness {
+
+html, body, div, p, span, strong, b, em, iframe, pre,
+h1, h2, h3, h4, h5, h6,
+img, dl, dt, dd,
+fieldset, form, legend, label,
+table, caption, thead, tbody, tfoot, tr, th, td,
+ul, ol, li, a, input, select, textarea {margin: 0;padding: 0; border: 0 none; }
+
+body {font-family: 'NanumSquare'; font-weight: 400; line-height: 1; font-size: 16px; }
+
+ul, ol, li {list-style: none;}
+em, address {font-style: normal;}
+img {border: 0 none; font-size: 0;line-height: 0;}
+sup {position: relative;top: 2px;font-size: 11px;line-height: 100%;}
+
+table {border-collapse: collapse; border-spacing:0; }
+caption {overflow: hidden;width: 0;height: 0;font-size: 0; line-height: 0;}
+th, td { vertical-align: middle;/* white-space: nowrap */}
+
+a {color: #333; text-decoration: none; line-height: 1;}
+a:hover, a:focus, a:active {text-decoration: underline;}
+a:visited {color: #333;}
+*, html {box-sizing: border-box; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; }
+*, *:before, *:after {box-sizing: border-box;-webkit-box-sizing: border-box; -moz-box-sizing: border-box;}
+
+
+
+.fp-tableCell {
+    vertical-align: top!important;
+}
+
+#unicef_card {
     max-width: 600px;
     width: 100%;
     margin: 0 auto;
 }
 
-#welcome_buisiness .slide-wrap {
+#unicef_card .slide-wrap {
     width: 100%;
+    /*  */
+    /* height: 100%; */
 }
 
-#welcome_buisiness .slide1 {
+#unicef_card .slide-box  {
+    -webkit-overflow-scrolling: touch;
+}
+
+
+#unicef_card .slide1 {
     position: relative;
 }
 
-#welcome_buisiness .swipe-box {
-    position: absolute;
-    top: 150px;
-    width: 228px;
-    left: 50%;
-    margin-left: -114px;
-    text-align: center;
-    padding: 33px 0;
-    border-radius: 33px;
-    background: rgba(256, 256, 256, .9);
-    opacity: 0;
-    transition: all ease .7s;
+#unicef_card .slide {border: 1px solid #000;}
 
+#unicef_card .swipe-box {
+    width: 100vw;
+    max-width: 600px;
+    height: 100vh!important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    text-align: center;
+    background: rgba(0,0,0,.7);
+    opacity: 0;
+    /* display: none; */
+    transition: all ease .7s;
 }
 
 
-#welcome_buisiness .swipe-box.on {
+#unicef_card .swipe-box.on {
     opacity: 1;
 
-    /* 
-    animation: fadeout 3s;
-    -moz-animation: fadeout 3s;
-    /* Firefox /
-    -webkit-animation: fadeout 3s;
-    /* Safari and Chrome /
-    -o-animation: fadeout 3s;
-    animation-fill-mode: forwards; 
-    */
 } 
 
 
@@ -63,498 +98,227 @@
     }
 }
 
-@keyframes fadeout {
+@keyframes mouseUp {
 
-    /* Firefox */
     0% {
-        opacity: 1;
+        opacity: 0;
+        transform: translateY(0);
     }
 
     70% {
         opacity: 1;
+        transform: translateY(-60px);
     }
 
     100% {
-        opacity: 0;
+        opacity: 1;
+        /* transform: translateY(-30px); */
     }
 }
 
-@keyframes fadeout {
+@keyframes mouseRight {
 
-    /* Safari and Chrome */
     0% {
-        opacity: 1;
+        opacity: 0;
+        transform: translateX(0);
     }
 
     70% {
         opacity: 1;
+        transform: translateX(60px);
     }
 
     100% {
-        opacity: 0;
+        opacity: 1;
     }
 }
 
-#welcome_buisiness .slide-img {
+#unicef_card .slide-img {
     width: 100%;
 }
 
-#welcome_buisiness .swipe-box img {
-    margin: 0 auto 20px;
+#unicef_card .swipe-box div {
+    position: absolute;
+    top: 50%;left: 50%;
+    transform: translate(-50%,-50%);
 }
 
-#welcome_buisiness .swipe-box p {
+#unicef_card .swipe-box img.icon-ver {
+    width: 27px;
+    margin: 0 auto 35px;
+}
+
+#unicef_card .swipe-box img.icon-hor {
+    width: 114px;
+    margin: 0 auto 70px;
+}
+
+#unicef_card .swipe-box img.icon-hand {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 53px;
+}
+
+#unicef_card .swipe-box img.hand-ver {
+    margin-left: 21px;
+    margin-top: -38px;
+}
+
+#unicef_card .swipe-box.on img.hand-ver.on {
+    animation: mouseUp .7s .5s alternate;
+}
+
+#unicef_card .swipe-box img.hand-hor {
+    margin-top: -45px;
+}
+
+#unicef_card .swipe-box.on img.hand-hor.on {
+    animation: mouseRight .7s .5s alternate;
+}
+
+#unicef_card .swipe-box p {
     margin: 0;
     font-size: 16px;
     letter-spacing: -.03em;
-    color: #333;
-    font-family: '__NanumGothicBold_5', sans-serif;
-}
-
-#welcome_buisiness p {
-    word-break: keep-all;
-    font-size: 16px;
-    line-height: 1.6;
-    color: #333;
-    margin-bottom: 10px;
-}
-
-#welcome_buisiness .slide21 .txt-box {
-    font-size: 16px;
-}
-
-#welcome_buisiness .add-txt {
-    font-size: 14px;
-    color: #717171;
-}
-
-#welcome_buisiness p.kid-say {
-    word-break: keep-all;
-    font-family: 'Gamja Flower', sans-serif;
-    font-size: 22px;
-    line-height: 1.4;
-    letter-spacing: -.02em;
-    margin-bottom: 15px;
-}
-
-#welcome_buisiness .name-tit {
-    font-size: 14px;
-}
-
-#welcome_buisiness .name {
-    font-family: 'Nanum Gothic', sans-serif;
-    font-size: 19px;
-    font-weight: 800;
-}
-
-#welcome_buisiness .slide1 .name {
-    display: inline-block;
-    font-family: 'Nanum Gothic', sans-serif;
-    font-size: 21px;
-    font-weight: 800;
-}
-
-#welcome_buisiness .con-wrap {
-    margin-top: -41px;
-}
-
-#welcome_buisiness .info {
-    width: 100%;
-    padding: 0 22px 20px;
+    color: #fff;
+    font-family: 'NanumSquare', sans-serif;
     position: relative;
-    z-index: 99;
-    overflow: inherit;
-    text-align: center;
+    width: fit-content;
+    margin: 0 auto;
 }
 
-#welcome_buisiness .paging-num::before {
-    content: "";
-    display: inline-block;
-    vertical-align: middle;
-    background: url(../img/paging.svg) no-repeat center;
+#unicef_card .swipe-box p::before {
+    content:'';
+    display: block;
+    width: 25px;
+    height: 23px;
+    background: url(../img/swipe-tip.png) no-repeat;
     background-size: contain;
-    width: 14px;
-    height: 14px;
-    margin-right: 5px;
-    opacity: 1!important;
+    position: absolute;
+    top: -15px;
+    left: -25px;
 }
 
-#welcome_buisiness .paging-num {
-    float: left;
+#unicef_card .swipe-box p b {
+    color: #07b5ff;
+    font-weight: 700;
+}
+
+#unicef_card p {
+    word-break: keep-all;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #555;
+    letter-spacing: -.32px;
+}
+
+#unicef_card .s_img_wrap {
+    position: relative;
+    height: fit-content;
+}
+
+#unicef_card .s_img_wrap .slide-img {
+    margin: 0;padding: 0;font-size: 0;line-height: 0;border: 0;
+}
+
+#unicef_card .name-tit {
+    font-size: 21px;
+    font-weight: 700;
+}
+
+#unicef_card .name {
+    font-weight: 800;
+    color: #07b5ff;
+}
+
+#unicef_card .con-wrap {
+    border-top: 3px solid #07b5ff;
+    margin-top: -5px;
+}
+
+#unicef_card .info {
+    position: absolute; 
+    bottom: 12px; 
+    z-index: 21; 
+    width: 100%;
+}
+
+
+#unicef_card .paging-num {
+    background: rgba(0,0,0,.5);
+    width: 50px;
+    height: 20px;
+    border-radius: 19px;
+    padding: 3px 0;
+    color: #999;
+    text-align: center;
+    font-family: 'Montserrat';
+    font-weight: 400;
+    margin: 0 auto;
+}
+
+#unicef_card .paging-num span {
+    font-family: 'Montserrat';
+    font-weight: 600;
     color: #fff;
 }
 
-#welcome_buisiness .paging-num span {
-    font-weight: 800;
-}
 
-#welcome_buisiness .arrows {
-    content: "";
-    display: block;
-    background: url(../img/arrow-dn-n.svg) no-repeat center;
+#unicef_card .logo {
+    background: url(../img/unicef-logo.png) no-repeat center;
     background-size: contain;
-    width: 26px;
-    height: 12px;
-    position: absolute;
-    left: 50%;
-    margin-left: -13px;
-    margin-top: 5px;
-}
-
-#welcome_buisiness .arrows.move {
-    background: url(../img/arrow-dn.svg) no-repeat center;
-    animation: motion 0.7s linear 0s infinite alternate;
-    margin-top: 0;
-    width: 48px;
-    height: 42px;
-}
-
-#welcome_buisiness .slide2 .arrows {
-    width: 48px;
-    height: 42px;
-    background: url(../img/arrow-dn-w.svg) no-repeat center;
-    margin-top: -7px;
-    margin-left: -24px;
-}
-
-@keyframes motion {
-    0% {
-        margin-top: -15px;
-    }
-
-    100% {
-        margin-top: -5px;
-    }
-}
-
-#welcome_buisiness .logo {
-    float: right;
-    content: "";
-    display: block;
-    background: url(../img/wv-logo.svg) no-repeat center;
-    background-size: contain;
-    width: 90px;
-    height: 20px;
+    width: 87px;
+    height: 11px;
     opacity: 1!important;
+    position: absolute;
+    top: 15px;
+    left: 20px;
 }
 
-#welcome_buisiness .txt-box {
+#unicef_card .txt-box {
     clear: both;
     position: relative;
     z-index: 9;
-    width: 100%;
-    margin-top: 10px;
     background: #fff;
-    border-radius: 12px;
-    padding: 20px 27px;
+    padding: 30px 20px 42px;
+    
 }
 
-#welcome_buisiness a.btn {
-    padding: 0;
-    font-size: 16px;
-    color: #ff6600;
-    font-family: '__NanumGothicBold_5', sans-serif;
-    letter-spacing: -.02em;
-    border-radius: 0;
-    border-bottom: 1px solid #ff6600;
-    padding-bottom: 5px;
+#unicef_card .txt-box .txt-bg {
+    color: #07b5ff;
+    font-weight: 700;
+    font-family: 'NanumSquare';
+    background: #f0faff;
+    padding: 15px;
+    line-height: 1.56;
+    margin: 18px 0;
+    transform: skew(-0.03deg);
 }
 
-#welcome_buisiness a.btn::after {
-    content: "";
-    display: inline-block;
-    margin-left: 5px;
-    background: url(../img/btn-arrow.svg) no-repeat center;
-    background-size: contain;
-    width: 16px;
-    height: 14px;
-    vertical-align: middle;
+#unicef_card .btn_wrap{
+    width: 100%;
+    margin-top: 25px;
+
 }
 
-#welcome_buisiness .slide16 .txt-box {
-    text-align: center;
-}
-
-#welcome_buisiness a.solid-btn {
-    display: inline-block;
-    padding: 13px;
-    width: 85%;
-    border-radius: 3px;
+#unicef_card .btn_wrap a {
+    display: block;
+    width: 100%;
+    height: 43px;
+    line-height: 43px;
     text-align: center;
     color: #fff;
     font-size: 16px;
-    line-height: 1.5;
-    font-family: '__NanumGothicBold_5', sans-serif;
-    font-weight: bold;
-    background: #ff6600;
-    letter-spacing: -.08em;
+    font-weight: 700;
+    background: #07b5ff;
+    text-decoration: none;
 }
 
-#welcome_buisiness .btn_wrap{text-align: center;margin-bottom:40px;}
-
-#welcome_buisiness .slide16 .con-wrap,
-#welcome_buisiness .slide17 .con-wrap,
-#welcome_buisiness .slide18 .con-wrap,
-#welcome_buisiness .slide19 .con-wrap,
-#welcome_buisiness .slide20 .con-wrap,
-#welcome_buisiness .slide21 .con-wrap {
-    margin-top: -37px;
-}
-
-#welcome_buisiness .web{display: none!important;}
-
-@media all and (min-width:600px){
-    #welcome_buisiness .web{display: inline-block!important;}
-    #welcome_buisiness .mobile{display: none!important;}
-}
-
-#welcome_buisiness .c_ong{color:#ff6600!important}
-
-/*�ㅽ겕紐⑤뱶 泥섎━*/
-@media (prefers-color-scheme: dark) {
-    #welcome_buisiness .logo {
-        float: right;
-        content: "";
-        display: block;
-        background: url(../img/wv-logo.svg) no-repeat center;
-        background-size: contain;
-        width: 90px;
-        height: 20px;
-        opacity: 1!important;
-    }
-
-    #welcome_buisiness .paging-num::before {
-        content: "";
-        display: inline-block;
-        vertical-align: middle;
-        background: url(../img/paging.svg) no-repeat center;
-        background-size: contain;
-        width: 14px;
-        height: 14px;
-        margin-right: 5px;
-        opacity: 1!important;
-    }    
-  }
-
-
-/* 
-#welcome_buisiness.buisiness2 .s_img_wrap {height:65vh}
-#welcome_buisiness.buisiness2 .con-wrap {height:35vh;}
-#welcome_buisiness .scroll_wrap{height: 100%;position: relative;overflow-y: scroll;}
-
-*/
-#welcome_buisiness .slick-slide { height: 100vh; overflow: auto; -webkit-overflow-scrolling: touch; }
-#welcome_buisiness .slide-box { position: relative;}
-#welcome_buisiness .slide-box .fp-tableCell { vertical-align: initial; }
-/* #welcome_buisiness .scroll_box{ position:fixed; bottom:0; left:0; z-index:99; display:block; width: 100%; height:40px; background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 90%); }  */
-#welcome_buisiness.buisiness1 .slide1 .add-txt{color:#ff6600}
-#welcome_buisiness.buisiness1 .slide1 .add-txt span{font-family: '__NanumGothicBold_5', sans-serif;}
-#welcome_buisiness.buisiness1 .slide3 .month{display:inline-block;margin-right:5px;font-size: 17px;font-family: '__NanumGothicBold_5', sans-serif;color:#333}
-#welcome_buisiness.buisiness1 .slide3 .month span{color:#ff6600;font-size: 17px;}
-#welcome_buisiness.buisiness1 .slide3 p{display:inline-block}
-#welcome_buisiness.buisiness1 .slide4 .paging-num{visibility: hidden;}
-#welcome_buisiness.buisiness1 .slide4 .tit{font-size:16px;font-family: '__NanumGothicBold_5', sans-serif;color:#ff6600;margin-bottom: 3px;}
-#welcome_buisiness.buisiness1 .slide4 .tit span{font-family: '__NanumGothic_5';}
-#welcome_buisiness.buisiness1 .slide5 .s_img_wrap{position: relative;}
-#welcome_buisiness.buisiness1 .slide5 .video_wrap{width:80%;position:absolute;top:149px;left:50%;margin-left:-43%;}
-#welcome_buisiness.buisiness1 .slide5 .video_wrap iframe{height:260px}
-@media all and (max-width:428px){
-    #welcome_buisiness.buisiness1 .slide5 .video_wrap{width:78%;position:absolute;top:106px;left:50%;margin-left:-42%;
-    }
-    #welcome_buisiness.buisiness1 .slide5 .video_wrap iframe{height:186px}
-}
-@media all and (max-width:414px){
-    #welcome_buisiness.buisiness1 .slide5 .video_wrap{width:78%;position:absolute;top:103px;left:50%;margin-left:-42%;
-    }
-    #welcome_buisiness.buisiness1 .slide5 .video_wrap iframe{height:179px}
-}
-@media all and (max-width:390px){
-    #welcome_buisiness.buisiness1 .slide5 .video_wrap{width:78%;position:absolute;top:98px;left:50%;margin-left:-42%;
-    }
-    #welcome_buisiness.buisiness1 .slide5 .video_wrap iframe{height:165px}
-}
-@media all and (max-width:375px){
-    #welcome_buisiness.buisiness1 .slide5 .video_wrap{width:80%;position:absolute;top:93px;left:50%;margin-left:-43%;
-    }
-    #welcome_buisiness.buisiness1 .slide5 .video_wrap iframe{height:167px}
-}
-@media all and (max-width:360px){
-    #welcome_buisiness.buisiness1 .slide5 .video_wrap{width:80%;position:absolute;top:85px;left:50%;margin-left:-43%;
-    }
-}
-@media all and (max-width:320px){
-    #welcome_buisiness.buisiness1 .slide5 .video_wrap{width:80%;position:absolute;top:80px;left:50%;margin-left:-43%;
-    }       #welcome_buisiness.buisiness1 .slide5 .video_wrap iframe{height:137px}
-}
-#welcome_buisiness.buisiness1 .slide6 .level_wrap{overflow:auto}
-#welcome_buisiness.buisiness1 .slide6 .level {float:left;font-size: 16px;font-family: '__NanumGothicBold_5', sans-serif;color:#ff6600;width:16%}
-#welcome_buisiness.buisiness1 .slide6 .level_con{float: left;width: 83%;}
-#welcome_buisiness.buisiness1 .slide6 .level_con span{font-family: '__NanumGothicBold_5', sans-serif;color:#333}
-#welcome_buisiness.buisiness1 .slide8 .s_img_wrap{position: relative;}
-#welcome_buisiness.buisiness1 .slide8 .video_wrap{width:81%;position:absolute;top:263px;left:50%;margin-left:-40.5%;}
-#welcome_buisiness.buisiness1 .slide8 .video_wrap iframe{height:254px}
-@media all and (max-width:428px){
-    #welcome_buisiness.buisiness1 .slide8 .video_wrap{width:77%;position:absolute;top:190px;left:50%;margin-left:-39%;}
-    #welcome_buisiness.buisiness1 .slide8 .video_wrap iframe{height:175px}
-}
-@media all and (max-width:414px){
-    #welcome_buisiness.buisiness1 .slide8 .video_wrap{width:77%;position:absolute;top:182px;left:50%;margin-left:-39%;}
-    #welcome_buisiness.buisiness1 .slide8 .video_wrap iframe{height:170px}
-}
-@media all and (max-width:390px){
-    #welcome_buisiness.buisiness1 .slide8 .video_wrap{width:77%;position:absolute;top:173px;left:50%;margin-left:-39%;}
-    #welcome_buisiness.buisiness1 .slide8 .video_wrap iframe{height:159px}
-}
-@media all and (max-width:375px){
-    #welcome_buisiness.buisiness1 .slide8 .video_wrap{width:81%;position:absolute;top:163px;left:50%;margin-left:-40.5%;}
-    #welcome_buisiness.buisiness1 .slide8 .video_wrap iframe{height:159px}
-}
-@media all and (max-width:360px){
-    #welcome_buisiness.buisiness1 .slide8 .video_wrap{width:81%;position:absolute;top:158px;left:50%;margin-left:-40.5%;}
-    #welcome_buisiness.buisiness1 .slide8 .video_wrap iframe{height:152px}
-}
-@media all and (max-width:320px){
-    #welcome_buisiness.buisiness1 .slide8 .video_wrap{width:81%;position:absolute;top:138px;left:50%;margin-left:-40.5%;}
-    #welcome_buisiness.buisiness1 .slide8 .video_wrap iframe{height:137px}
-}
-#welcome_buisiness.buisiness1 .slide9 .txt-box >div{margin-bottom:5px}
-
-
-/*援�궡�ъ뾽*/
-#welcome_buisiness.buisiness2 .slide1 .add-txt{color:#ff6600}
-#welcome_buisiness.buisiness2 .slide1 .add-txt span{font-family: '__NanumGothicBold_5', sans-serif;}
-#welcome_buisiness.buisiness2 .slide3 .month{display:inline-block;font-size: 17px;margin-right:5px;font-family: '__NanumGothicBold_5', sans-serif;color:#333}
-#welcome_buisiness.buisiness2 .slide3 .month span{color:#ff6600;font-size: 17px;}
-#welcome_buisiness.buisiness2 .slide4 .paging-num{visibility: hidden;}
-#welcome_buisiness.buisiness2 .slide4 .tit{font-size:16px;font-family: '__NanumGothicBold_5', sans-serif;color:#ff6600;margin-bottom: 3px;}
-#welcome_buisiness.buisiness2 .slide4 .tit span{font-family: '__NanumGothic_5';}
-#welcome_buisiness.buisiness2 .slide11 .txt-box >div{margin-bottom:5px}
-
-/*遺곹븳�ъ뾽*/
-#welcome_buisiness.buisiness4 .slide1 .add-txt{color:#ff6600}
-#welcome_buisiness.buisiness4 .slide1 .add-txt span{font-family: '__NanumGothicBold_5', sans-serif;}
-#welcome_buisiness.buisiness4 .slide3 .month{display:inline-block;font-size: 17px;margin-right:5px;font-family: '__NanumGothicBold_5', sans-serif;color:#333}
-#welcome_buisiness.buisiness4 .slide3 .month span{color:#ff6600;font-size: 17px;}
-#welcome_buisiness.buisiness4 .slide4 .paging-num{visibility: hidden;}
-#welcome_buisiness.buisiness4 .slide4 .tit{font-size:16px;font-family: '__NanumGothicBold_5', sans-serif;color:#ff6600;margin-bottom: 3px;}
-#welcome_buisiness.buisiness4 .slide8 .txt-box >div{margin-bottom:5px}
-#welcome_buisiness.buisiness4 .slide5 .desc{font-size: 14px;color:#999;}
-#welcome_buisiness.buisiness4 .slide7 .s_img_wrap{position: relative;}
-#welcome_buisiness.buisiness4 .slide7 .video_wrap{width:80%;position:absolute;top:186px;left:50%;margin-left:-43%;}
-#welcome_buisiness.buisiness4 .slide7 .video_wrap iframe{height:254px}
-#welcome_buisiness.buisiness4 .slide6 ul li{font-size: 16px;}
-#welcome_buisiness.buisiness4 .slide6 .number{color:#ff6600;}
-#welcome_buisiness.buisiness4 .slide6 .tit{color:#333;font-family: '__NanumGothicBold_5', sans-serif;display: inline-block;margin-right: 4px;}
-@media all and (max-width:428px) {
-#welcome_buisiness.buisiness4 .slide7 .video_wrap{width:77%;position:absolute;top:129px;left:50%;margin-left:-41%;}
-#welcome_buisiness.buisiness4 .slide7 .video_wrap iframe{height:188px}
-}
-@media all and (max-width:414px) {
-#welcome_buisiness.buisiness4 .slide7 .video_wrap{width:77%;position:absolute;top:129px;left:50%;margin-left:-41%;}
-#welcome_buisiness.buisiness4 .slide7 .video_wrap iframe{height:174px}
-}
-@media all and (max-width:390px) {
-#welcome_buisiness.buisiness4 .slide7 .video_wrap{width:77%;position:absolute;top:120px;left:50%;margin-left:-41%;}
-#welcome_buisiness.buisiness4 .slide7 .video_wrap iframe{height:167px}
-}
-@media all and (max-width:375px) {
-#welcome_buisiness.buisiness4 .slide7 .video_wrap{width:80%;position:absolute;top:87px;left:50%;margin-left:-43%;}
-#welcome_buisiness.buisiness4 .slide7 .video_wrap iframe{height:219px}
-}
-@media all and (max-width:360px) {
-#welcome_buisiness.buisiness4 .slide7 .video_wrap{width:79%;position:absolute;top:107px;left:50%;margin-left:-42%;}
-#welcome_buisiness.buisiness4 .slide7 .video_wrap iframe{height:159px}
-}
-@media all and (max-width:320px) {
-#welcome_buisiness.buisiness4 .slide7 .video_wrap{width:79%;position:absolute;top:98px;left:50%;margin-left:-42%;}
-#welcome_buisiness.buisiness4 .slide7 .video_wrap iframe{height:139px}
+#unicef_card .btn_wrap a+a {
+    margin-top: 10px;
 }
 
 
-/*�꾩껜�ъ뾽*/
-#welcome_buisiness.buisiness5 .slide1 .add-txt{color:#ff6600}
-#welcome_buisiness.buisiness5 .slide1 .add-txt span{font-family: '__NanumGothicBold_5', sans-serif;}
-#welcome_buisiness.buisiness5 .slide4 .paging-num{visibility: hidden;}
-#welcome_buisiness.buisiness5 .slide3 .month{display:inline-block;font-size: 17px;margin-right:5px;font-family: '__NanumGothicBold_5', sans-serif;color:#333}
-#welcome_buisiness.buisiness5 .slide3 .month span{color:#ff6600;font-size: 17px;}
-#welcome_buisiness.buisiness5 .slide4 .tit{font-size:16px;font-family: '__NanumGothicBold_5', sans-serif;color:#ff6600;margin-bottom: 3px;}
-#welcome_buisiness.buisiness5 .slide5 ul li{font-size: 16px;}
-#welcome_buisiness.buisiness5 .slide5 .tit{color:#ff6600;font-family: '__NanumGothicBold_5', sans-serif;display: inline-block;margin-right: 4px;}
-#welcome_buisiness.inner_con .txt-box{border-radius: 0px;}
-#welcome_buisiness.inner_con .slide-box{margin-bottom: 40px;}
-#welcome_buisiness.inner_con .btn_wrap{margin-bottom: 60px;}
-#welcome_buisiness.inner_con .paging-num {visibility: hidden;}
 
 
-
-/*湲곕툕�대굹�댁뒪�곗씠*/
-#welcome_buisiness.buisiness6 .slide1 .add-txt { color:#ff6600; }
-#welcome_buisiness.buisiness6 .slide1 .add-txt span { font-family:'__NanumGothicBold_5',sans-serif; }
-
-#welcome_buisiness.buisiness6 .slide2 .s_img_wrap { position:relative; }
-#welcome_buisiness.buisiness6 .slide2 .video_wrap1 { width:79%; position:absolute; top:400px; left:50%; margin-left:-42%; }
-#welcome_buisiness.buisiness6 .slide2 .video_wrap1 iframe { height:260px; }
-@media all and (max-width:428px){
-#welcome_buisiness.buisiness6 .slide2 .video_wrap1 { width:79%; position:absolute; top:285px; left:50%; margin-left:-42%; }
-#welcome_buisiness.buisiness6 .slide2 .video_wrap1 iframe { height:186px; }
-}
-@media all and (max-width:414px){
-#welcome_buisiness.buisiness6 .slide2 .video_wrap1 { width:79%; position:absolute; top:277px; left:50%; margin-left:-42%; }
-#welcome_buisiness.buisiness6 .slide2 .video_wrap1 iframe { height:179px; }
-}
-@media all and (max-width:390px){
-#welcome_buisiness.buisiness6 .slide2 .video_wrap1 { width:78%; position:absolute; top:262px; left:50%; margin-left:-42%; }
-#welcome_buisiness.buisiness6 .slide2 .video_wrap1 iframe { height:165px; }
-}
-@media all and (max-width:375px){
-#welcome_buisiness.buisiness6 .slide2 .video_wrap1 { width:77%; position:absolute; top:248px; left:50%; margin-left:-41%; }
-#welcome_buisiness.buisiness6 .slide2 .video_wrap1 iframe { height:167px; }
-}
-@media all and (max-width:360px){
-#welcome_buisiness.buisiness6 .slide2 .video_wrap1 { width:77%; position:absolute; top:237px; left:50%; margin-left:-41%; }
-#welcome_buisiness.buisiness6 .slide2 .video_wrap1 iframe { height:163px; }
-}
-@media all and (max-width:320px){
-#welcome_buisiness.buisiness6 .slide2 .video_wrap1 { width:77%; position:absolute; top:215px; left:50%; margin-left:-41%; }
-#welcome_buisiness.buisiness6 .slide2 .video_wrap1 iframe { height:137px; }
-}
-
-#welcome_buisiness.buisiness6 .slide3 .month { display:inline-block; font-size:17px; margin-right:5px; font-family:'__NanumGothicBold_5',sans-serif; color:#333; }
-#welcome_buisiness.buisiness6 .slide3 .month span { color:#ff6600; font-size:17px;}
-
-#welcome_buisiness.buisiness6 .slide4 .tit { font-size:16px; font-family:'__NanumGothicBold_5',sans-serif; color:#ff6600; margin-bottom:3px; }
-
-#welcome_buisiness.buisiness6 .slide5 .s_img_wrap { position:relative; }
-#welcome_buisiness.buisiness6 .slide5 .video_wrap2 { width:78%; position:absolute; top:149px; left:50%; margin-left:-42%; }
-#welcome_buisiness.buisiness6 .slide5 .video_wrap2 iframe { height:260px; }
-@media all and (max-width:428px){
-#welcome_buisiness.buisiness6 .slide5 .video_wrap2 { width:78%; position:absolute; top:106px; left:50%; margin-left:-42%; }
-#welcome_buisiness.buisiness6 .slide5 .video_wrap2 iframe { height:186px; }
-}
-@media all and (max-width:414px){
-#welcome_buisiness.buisiness6 .slide5 .video_wrap2 { width:78%; position:absolute; top:103px; left:50%; margin-left:-42%; }
-#welcome_buisiness.buisiness6 .slide5 .video_wrap2 iframe { height:179px; }
-}
-@media all and (max-width:390px){
-#welcome_buisiness.buisiness6 .slide5 .video_wrap2 { width:78%; position:absolute; top:98px; left:50%; margin-left:-42%; }
-#welcome_buisiness.buisiness6 .slide5 .video_wrap2 iframe { height:165px; }
-}
-@media all and (max-width:375px){
-#welcome_buisiness.buisiness6 .slide5 .video_wrap2 { width:78%; position:absolute; top:91px; left:50%; margin-left:-42%; }
-#welcome_buisiness.buisiness6 .slide5 .video_wrap2 iframe { height:167px; }
-}
-@media all and (max-width:360px){
-#welcome_buisiness.buisiness6 .slide5 .video_wrap2 { width:78%; position:absolute; top:85px; left:50%; margin-left:-42%; }
-#welcome_buisiness.buisiness6 .slide5 .video_wrap2 iframe { height:163px; }
-}
-@media all and (max-width:320px){
-#welcome_buisiness.buisiness6 .slide5 .video_wrap2 { width:78%; position:absolute; top:80px; left:50%; margin-left:-42%; }
-#welcome_buisiness.buisiness6 .slide5 .video_wrap2 iframe { height:137px; }
-}
-
-#welcome_buisiness.buisiness6 .slide6 .level_wrap { overflow:auto; }
-#welcome_buisiness.buisiness6 .slide6 .level { float:left; font-size:16px; font-family:'__NanumGothicBold_5',sans-serif; color:#ff6600; width:16%; }
-#welcome_buisiness.buisiness6 .slide6 .level_con { float:left; width:83%; }
-#welcome_buisiness.buisiness6 .slide6 .level_con span { font-family:'__NanumGothicBold_5',sans-serif; color:#333; }
-
-#welcome_buisiness.buisiness6 .slide7 .txt-box span { font-family:'__NanumGothicBold_5',sans-serif; color:#ff6600; }

@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html class="nojs html css_verticalspacer" lang="ko-KR">
+<head>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
+<meta name="generator" content="2017.0.2.363"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=0,maximum-scale=10,user-scalable=yes">
+<!-- 개별화 페이지는 검색안되도록 처리 -->
+<meta name="HandheldFriendly" content="true">
+<meta name="format-detection" content="telephone=no">
+<meta name="copyright" content="World Vision Korea" />
+
+<meta name="author" content="Unicef">
+<meta name="robots" content="index, follow">
+<meta name="title" content="내사업후원 웰컴메시지 서비스 | 유니세프">
+<meta name="description" content="후원메세지, 웰컴메세지, 유니세프, 아동후원, 모금, 유니세프팔찌">
+<meta name="keywords" content="정기후원메세지, 서비스, 국내사업후원">
+<meta property="og:type" content="website" />
+<meta property="og:title" content="내사업후원 웰컴메시지 서비스 | 유니세프" />
+<meta property="og:description" content="후원메세지, 웰컴메세지, 유니세프, 아동후원, 모금, 유니세프팔찌" />
+<meta property="og:site_name" content="Unicef">
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="내사업후원 웰컴메시지 서비스 | 유니세프" />
+<meta name="twitter:description" content="후원메세지, 웰컴메세지, 유니세프, 아동후원, 모금, 유니세프팔찌" />
+
+<meta property="og:image" content="/img/fb_welcome_02.jpg" />
+<meta property="og:url" content="//m.worldvision.or.kr/campaign/donor/welcome_buisiness_domestic.asp?PID=WWIPKRDAP" />
+<script src="//t1.daumcdn.net/adfit/static/kp.js"></script>
+<title>카드 개인화 서비스 | 유니세프</title>
+<!-- CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.3.2/swiper-bundle.css">
+<link rel="canonical" href="index.html">
+
+
+  </head>
+
+  <body>
+    <!-- Swiper -->
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">Slide 1</div>
+        <div class="swiper-slide">
+            <div class="ddd">
+                Slide 2
+            </div>
+        </div>
+        <div class="swiper-slide">Slide 3</div>
+        <div class="swiper-slide">Slide 4</div>
+        <div class="swiper-slide">Slide 5</div>
+        <div class="swiper-slide">Slide 6</div>
+        <div class="swiper-slide">Slide 7</div>
+        <div class="swiper-slide">Slide 8</div>
+        <div class="swiper-slide">Slide 9</div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper('.swiper', {
+            direction: 'vertical',
+            loop: true,
+            breakpoints: {
+              // PC
+              768: {
+                
+              }
+            }
+        });
+
+        var startScroll, touchStart, touchCurrent;
+        swiper.slides.on('touchstart', function (e) {
+            startScroll = this.scrollTop;
+            touchStart = e.targetTouches[0].pageY;
+        }, true);
+
+        swiper.slides.on('touchmove', function (e) {
+            touchCurrent = e.targetTouches[0].pageY;
+            var touchesDiff = touchCurrent - touchStart;
+            var slide = this;
+            var onlyScrolling = 
+                    ( slide.scrollHeight > slide.offsetHeight ) && //allow only when slide is scrollable
+                    (
+                        ( touchesDiff < 0 && startScroll === 0 ) || //start from top edge to scroll bottom
+                        ( touchesDiff > 0 && startScroll === ( slide.scrollHeight - slide.offsetHeight ) ) || //start from bottom edge to scroll top
+                        ( startScroll > 0 && startScroll < ( slide.scrollHeight - slide.offsetHeight ) ) //start from the middle
+                    );
+            if (onlyScrolling) {
+                e.stopPropagation();
+            }
+        }, true);
+        
+    </script>
+  </body>
+</html>
