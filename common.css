@@ -114,21 +114,21 @@ a:visited {color: #333;}
 /* ------------------------------------ swiper ----------------------------------- */
 .swiper { width:100%; height:100%; }
 .swiper-slide { overflow-y: auto; }
-.swipe-box { width:100vw; max-width:600px; height:100vh; position:fixed; top:0; left:0; right: 0; bottom: 0; margin: auto; z-index:99; text-align:center; background:rgba(0,0,0,.7); opacity:0; transition:all ease .7s; }
-.swipe-box.on { opacity:1; }
-.swipe-box div { position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); display: none; }
-.swipe-box img.icon-ver { width:27px; margin:0 auto 35px; }
-.swipe-box img.icon-hor { width:114px; margin:0 auto 70px; }
-.swipe-box img.icon-hand { position:absolute; left:50%; top:50%; width:53px; }
-.swipe-box img.hand-ver { margin-left:21px; margin-top:-38px; }
-.swipe-box.on img.hand-ver.on { animation:mouseUp .7s .5s alternate; }
-.swipe-box img.hand-hor { margin-top:-45px; }
-.swipe-box.on img.hand-hor.on { animation:mouseRight .7s .5s alternate; }
-.swipe-box p { font-size:16px; letter-spacing:-.03px; color:#fff; position:relative; width:fit-content; margin:0 auto; }
-.swipe-box p::before { content:''; display:block; width:25px; height:23px; background:url(../img/swipe-tip.png) 0 0/contain no-repeat; position:absolute; top:-15px; left:-25px; }
-.swipe-box p b { color:#07b5ff; font-weight:700; }
-.gradient { width: 100%; position: fixed; bottom: 0; height: 40px; background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 90%); z-index: 9; opacity: 1; transition: all ease .2s; }
-.gradient.off { opacity: 0; }
+#unicef_card .swipe-box { width:100vw; max-width:600px; height:100vh; position:fixed; top:0; left:0; right: 0; bottom: 0; margin: auto; z-index:99; text-align:center; background:rgba(0,0,0,.7); opacity:0; transition:all ease .7s; }
+#unicef_card .swipe-box.on { opacity:1; }
+#unicef_card .swipe-box div { position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); display: none; }
+#unicef_card .swipe-box img.icon-ver { width:27px; margin:0 auto 35px; }
+#unicef_card .swipe-box img.icon-hor { width:114px; margin:0 auto 70px; }
+#unicef_card .swipe-box img.icon-hand { position:absolute; left:50%; top:50%; width:53px; }
+#unicef_card .swipe-box img.hand-ver { margin-left:21px; margin-top:-38px; }
+#unicef_card .swipe-box.on img.hand-ver.on { animation:mouseUp .7s .5s alternate; }
+#unicef_card .swipe-box img.hand-hor { margin-top:-45px; }
+#unicef_card .swipe-box.on img.hand-hor.on { animation:mouseRight .7s .5s alternate; }
+#unicef_card .swipe-box p { font-size:16px; letter-spacing:-.03px; color:#fff; position:relative; width:fit-content; margin:0 auto; }
+#unicef_card .swipe-box p::before { content:''; display:block; width:25px; height:23px; background:url(../img/swipe-tip.png) 0 0/contain no-repeat; position:absolute; top:-15px; left:-25px; }
+#unicef_card .swipe-box p b { color:#07b5ff; font-weight:700; }
+#unicef_card .gradient { width: 100%; position: fixed; bottom: 0; height: 40px; background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 90%); z-index: 9; opacity: 1; transition: all ease .2s; }
+#unicef_card .gradient.off { opacity: 0; }
 
 /* ------------------------------------ card ----------------------------------- */
 #unicef_card { max-width:600px; width:100%; margin:0 auto; height: 100%; position: relative; }
