@@ -2,7 +2,20 @@
 /* --------------------- Unisef-PMS Released 2022.08.31 --------------------- */
 /* ------------------------ Published by 4m Creative ------------------------ */
 
-$(".swiper-slide, .swiper-slide-duplicate").addClass('goNext goPrev')
+// 모바일 높이값 상하 확장 UI 제외한 실측 크기 환산
+$(function () {
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty("--vh", `${vh}px`);
+
+    //resize
+    window.addEventListener("resize", () => {
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty("--vh", `${vh}px`);
+    });
+});
+
+$(".swiper-slide, .swiper-slide-duplicate").addClass('goNext goPrev');
+document.body.style.overscrollBehaviorY = 'none';
 
 // 스크롤 제거한 대신 하단에 잔상으로 길이 확인
 $(".swiper-slide, .swiper-slide-duplicate").on('resize scroll', function(){
@@ -10,9 +23,9 @@ $(".swiper-slide, .swiper-slide-duplicate").on('resize scroll', function(){
     var innerHeight = $(this).innerHeight();
     var scrollHeight = $(this).prop('scrollHeight');
 
-    if (scrollTop + innerHeight === scrollHeight) {
+    if (scrollTop + innerHeight + 60 > scrollHeight) {
         $(this).addClass('goNext')
-    } else if (scrollTop === 0) {
+    } else if (scrollTop < 60) {
         $(this).addClass('goPrev')
     } else {
         $(this).removeClass('goNext goPrev')
@@ -91,7 +104,7 @@ if ($("body").hasClass('vertical')) {
         eachSlide.addEventListener("touchend", (e) => {
             endPoint = e.changedTouches[0].pageX; // 터치가 끝나는 위치 저장
             vEndPoint = e.changedTouches[0].pageY;
-            detectTouch = 40;
+            detectTouch = 30;
         
             // 아래쪽으로 스와이프 된 경우 (prev move)
             if (vStartPoint < vEndPoint - detectTouch && startPoint < endPoint + 40 && startPoint + 40 > endPoint && eachSlide.classList.contains('goPrev') === true) {
