@@ -132,7 +132,7 @@ a:visited {color: #333;}
 
 /* ------------------------------------ card ----------------------------------- */
 #unicef_card { max-width:600px; width:100%; margin:0 auto; height: 100%; position: relative; }
-#unicef_card .slide-img { display:block; width:100%; height:fit-content; object-fit:cover; }
+#unicef_card .slide-img { display:block; width:100%; object-fit:contain; }
 #unicef_card p { word-break:keep-all; font-size:16px; line-height:1.5; color:#555; letter-spacing:-.32px; }
 #unicef_card .s_img_wrap { position:relative; height:fit-content; border-bottom:3px solid #07b5ff; }
 #unicef_card .s_img_wrap .slide-img { margin:0; padding:0; font-size:0; line-height:0; border:0; }
