@@ -183,7 +183,7 @@ if (!indexNumber) {
             });
         });
 
-    } else if ($("body").hasClass('horizontal')) {
+    } else {
         $('.popup_horizontal').show();
         options = {
             direction: 'horizontal',
